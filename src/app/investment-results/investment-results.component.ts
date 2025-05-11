@@ -5,8 +5,7 @@ import { InvestmentService } from '../investment.service';
 
 @Component({
   selector: 'app-investment-results',
-  standalone: true,
-  imports: [CurrencyPipe],
+  standalone: false,
   templateUrl: './investment-results.component.html',
   styleUrl: './investment-results.component.css',
 })
@@ -18,8 +17,8 @@ export class InvestmentResultsComponent {
   // }
 
   // //by computed Function
-  // results = computed(() => this.investmentService.resultsData());
+  results = computed(() => this.investmentService.resultsData());
 
   // by asreadonly method
-  results = this.investmentService.resultsData.asReadonly();
+  // results = this.investmentService.resultsData.asReadonly();
 }
